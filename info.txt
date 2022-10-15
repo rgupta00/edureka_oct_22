@@ -1,1 +1,140 @@
-edureka training oct 22
+sw installation instructions
+https://drive.google.com/file/d/1qePm_HvYndSQ6tJkNhHN7hvek4iIi4zP/view?usp=sharing
+
+
+jdk 1.8
+https://www.oracle.com/in/java/technologies/javase/javase8-archive-downloads.html
+
+
+maven
+https://maven.apache.org/download.cgi
+
+
+sts
+https://dist.springsource.com/release/STS/index.html
+
+
+mysql
+https://dev.mysql.com/downloads/mysql/
+
+sw req:
+------------
+jdk 1.8+ maven + sts + mysql + laptop 8gb/16gb + ssd
+
+
+code :
+https://github.com/rgupta00/edureka_oct_22
+
+ppt pdf and other stuff:
+https://drive.google.com/drive/folders/1ir7TQr3Pgq6WQN3jmbBGbMKF_6jRsSuC?usp=sharing
+
+workshop on design pattern
+https://drive.google.com/file/d/1_PjqGoSEnz9Ph-QoSnGTJ1gboJlIuZBj/view?usp=sharing
+
+playlist on core java
+https://www.youtube.com/playlist?list=PLv2-IhRmhbySgIQo3rH8KnclTSOYAp2xG
+
+
+course plan:
+------------
+
+8 session 3X8=24hr
+
+
+
+what is loose coupling and what is DI
+
+passanger is using car to travel
+
+
+You need to tell spring what depend on what? bean wiring?
+
+1. xml
+2. annotation
+3. java configration
+
+
+spring : jar files => we use maven to automatically download the jar 
+	maven
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+Bank application:
+----------------
+		
+		
+		
+public interface AccountDao {
+	public List<Account> getAll();
+	public Account getById(int id);
+	public void updateAccount(Account account);
+	public void addAccount(Account account);
+	public void deleteAccount(int id);
+}
+
+
+public class AccountDaoCollectionImpl implements AccountDao{
+	private Map<Integer, Account> accounts=new HashMap<>();
+	
+	public AccountDaoCollectionImpl() {
+		accounts.put(1, new Account(1, "raj", 560000.00));
+		accounts.put(2, new Account(2, "ekta", 760000.00));
+	}
+	@Override
+	public List<Account> getAll() {
+		System.out.println("getAll using hard coded collection...");
+		return new ArrayList<Account>(accounts.values());
+	}
+
+	@Override
+	public Account getById(int id) {
+		return accounts.get(id);
+	}
+
+	@Override
+	public void updateAccount(Account account) {
+		try {
+			Thread.sleep(1000);
+		}catch(InterruptedException e) {}
+		accounts.put(account.getId(), account);
+	}
+
+	@Override
+	public void addAccount(Account account) {
+		
+	}
+
+	@Override
+	public void deleteAccount(int id) {
+		
+	}
+
+}
+
+
