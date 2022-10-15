@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- scope="prototype" scope="singleton" -->
+	<!-- setter vs contructor injection -->
+	
+	<!-- autowiring : aka shortcut -->
+	
+	<bean id="p" class="com.demo.Passanger" autowire="byType">
+		<property name="name" value="raja"/>
+	</bean>
+	
+	<bean id="v1" class="com.demo.Bike"/>
+	<bean id="v2" class="com.demo.Car" primary="true"/>
+	
+</beans>
