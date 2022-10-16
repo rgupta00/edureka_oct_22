@@ -58,10 +58,28 @@ spring : jar files => we use maven to automatically download the jar
 	maven
 	
 
+anotation:
+
+@Component		@Value		@Autowire
 
 
 
+3 tier arch:-
 
+
+	@Controller
+	@RestController			@Service 		@Repository
+	
+	
+	controller	<-----------------> service layer <------------> dao layer <----> db
+	
+	
+	MVC: model view controller design pattern	
+
+
+@Bean annotation vs @Component
+
+When to use what?
 
 
 
@@ -134,7 +152,639 @@ public class AccountDaoCollectionImpl implements AccountDao{
 	public void deleteAccount(int id) {
 		
 	}
+	
 
 }
+
+
+
+
+Session 2:
+1. spring bean life cycle, aware interface
+2. xml configuration in depth
+3. java annotation config in depth
+4. spring AOP aspectJ integration
+5. spring jdbc , jdbc template
+
+
+
+
+
+
+
+Understand Depdendency Injection
+_________________________________
+
+What is the need of spring framework?
+-----------------------------------
+
+Lets take a example:
+
+Rest 
+Controller <------------ Service layer <---------- persistance layer <------ db
+
+ravi team		sumit team			kapil team
+								jdbc
+								hibernate
+
+
+
+
+
+what sping does it produce loose coupling between the layer 
+Take example lets say ravi team creating controller layer, sumit team is creating service layer and kapil team is
+creating persitance layer... now controller layer need service and service layer need persistance layer
+
+as we have design our application as per interface and we have use DI therefore kapil team can change implemenation
+of service layer ( let earlier they are using Jdbc now wnat to use hibernate ) without effectiving even a single line
+of code in Service layer (sumit team) do you not think it is great...
+
+beside that spring DI help to manage dependency of our project and make our project flexiable
+
+
+						----------AccountDaoImplHib
+						|
+	AccountService <---------------- AccountDao-------AccountDaoImplJdbc
+						|
+						---------- AccountDaoImplUtil
+						
+
+
+
+=> we have to change the implementation ...whenever we swap dao layer :(
+
+
+Spring BeanFactory vs ApplicationContext
+______________________________________
+
+ * BeanFactory:
+ 	 - light weight container , dont support many featues
+ 	  - dont use it
+ BeanFactory applicationContext=new XmlBeanFactory(new ClassPathResource("demo.xml"));
+ 
+ *  ApplicationContext 
+  	- more powerful
+    	ApplicationContext applicationContext=
+				new ClassPathXmlApplicationContext("demo.xml");
+				
+	ApplicationContext
+		-ClassPathXmlApplicationContext
+		-FileSystemXmlApplicationContext
+		-AnnotationConfigApplicationContext
+		-XMLWebApplicationContext
+
+
+spring bean configuration:
+________________________
+1. xml configuration
+2. annotation configuration
+3. java configuration
+
+
+Understand Aspect Oriented Programming
+______________________________________
+
+	* If i need to take training at some client location, infra is provided by that client
+		i need to only carray my laptop
+
+	* help to achive high cohesion
+
+
+ consider: we need to find how much time it take to execute code of service layer and do logging into a log file
+  
+ 
+Bank application:	
+
+public interface AccountDao {
+	public List<Account> getAll();
+	public Account getById(int id);
+	public void updateAccount(Account account);
+	public void addAccount(Account account);
+	public void deleteAccount(int id);
+}
+
+
+public class AccountDaoCollectionImpl implements AccountDao{
+	private Map<Integer, Account> accounts=new HashMap<>();
+	
+	public AccountDaoCollectionImpl() {
+		accounts.put(1, new Account(1, "amit", 1000.00));
+		accounts.put(2, new Account(2, "sumit", 1000.00));
+	}
+	@Override
+	public List<Account> getAll() {
+		System.out.println("getAll using hard coded collection...");
+		return new ArrayList<Account>(accounts.values());
+	}
+
+	@Override
+	public Account getById(int id) {
+		return accounts.get(id);
+	}
+
+	@Override
+	public void updateAccount(Account account) {
+		try {
+			Thread.sleep(1000);
+		}catch(InterruptedException e) {}
+		accounts.put(account.getId(), account);
+	}
+
+	@Override
+	public void addAccount(Account account) {
+		
+	}
+
+	@Override
+	public void deleteAccount(int id) {
+		
+	}
+
+}
+
+
+	@Controller	@Service			@repository
+	@RestController
+<------------------><--------------------><---------------------->		DB
+	web		service				dao
+
+List of most imp annotation :
+-------------------------------
+
+	@Component
+		@Controller	@Service			@repository
+		@RestController
+		
+	@Autowire
+	@Value
+	
+	Life cycle of bean: @Lazy @Eager @PreDestroy @PostConstruct @Scope(....)
+	
+	@Profile	-Dspring.profiles.active=dev
+	
+AOP:
+-----
+	@EnableAspectJ...
+	@Before @After @Around @AfterThrows @Aspect
+	
+	
+	
+@Configuration
+@ComponentScan(basePackages = { "com.bankapp" })
+//<context:component-scan base-package="com.bankapp"/>
+@EnableAspectJAutoProxy // anno is used to integrate spring with aspectJ framework
+@EnableTransactionManagement // hey spring i want that u should do declartive tx mgt
+@PropertySource("classpath:db.properties")
+public class AppConfig {
+
+	@Value("${jdbc.url}")
+	private String url;
+
+	@Value("${jdbc.username}")
+	private String username;
+
+	@Value("${jdbc.password}")
+	private String password;
+
+	@Value("${jdbc.driver}")
+	private String driverName;
+
+	// i need to configure datasouce
+
+	@Bean
+	public DataSource getDataSource() {
+		DriverManagerDataSource dataSource = new DriverManagerDataSource();
+		dataSource.setUrl(url);
+		dataSource.setUsername(username);
+		dataSource.setPassword(password);
+
+		dataSource.setDriverClassName(driverName);
+		return dataSource;
+
+	}
+	@Bean
+	public DataSourceTransactionManager dataSourceTransactionManager(DataSource dataSource) {
+		DataSourceTransactionManager dataSourceTransactionManager=new DataSourceTransactionManager();
+		dataSourceTransactionManager.setDataSource(dataSource);
+		return dataSourceTransactionManager;
+	}
+	
+	//jdbcTemplate
+	@Bean
+	public JdbcTemplate jdbcTemplate(DataSource dataSource) {
+		JdbcTemplate jdbcTemplate=new JdbcTemplate();
+		jdbcTemplate.setDataSource(dataSource);
+		return jdbcTemplate;
+	}
+}
+
+log4j dependencies:
+-------------------
+     		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>2.7</version>
+		</dependency>
+		
+
+AOP dependency:
+-----------------
+                  <dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>1.6.9</version>
+		</dependency>
+		<!-- to support AOP: aspectJ -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.8.1</version>
+		</dependency>
+
+
+
+Spring jdbc:
+-------------
+
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+	<context:component-scan base-package="com.bankapp"/>
+	<aop:aspectj-autoproxy/>
+	
+	<context:property-placeholder location="classpath:db.properties"/>
+	
+	<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${jdbc.driver}"/>
+		<property name="url" value="${jdbc.url}"/>
+		<property name="username" value="${jdbc.username}"/>
+		<property name="password" value="${jdbc.password}"/>
+	</bean>
+	
+	<!--configuration of jdbcTemplate -->
+	
+	<tx:annotation-driven transaction-manager="transactionManager"/>	
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//	@Override
+//	public List<Account> getAll() {
+//		List<Account> accounts = new ArrayList<Account>();
+//
+//		Connection connection = null;
+//		try {
+//			connection = dataSource.getConnection();
+//			// now i want to print all records
+//			Statement stmt = connection.createStatement();
+//			ResultSet rs = stmt.executeQuery("select * from account");
+//
+//			while (rs.next()) {
+//				accounts.add(new Account(rs.getInt(1), rs.getString(2), rs.getDouble(3)));
+//			}
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		} finally {
+//			if (connection != null) {
+//				try {
+//					connection.close();
+//				} catch (SQLException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+//			}
+//		}
+//
+//		return accounts;
+//
+//	}
+
+
+
+        @Bean
+	public LocalSessionFactoryBean getLocalSessionFactoryBean(DataSource dataSource) {
+		LocalSessionFactoryBean lsb=new LocalSessionFactoryBean();
+		lsb.setDataSource(dataSource);
+		lsb.setPackagesToScan(new String[] {"com.bankapp.model.dao"});
+		lsb.setHibernateProperties(getHibernateProperties());
+		return lsb;
+	}
+	private Properties getHibernateProperties() {
+		Properties properties=new Properties();
+		properties.setProperty("hibernate.hbm2ddl.auto", "update");
+		properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL57Dialect");
+		properties.setProperty("hibernate.show_sql", "true");
+		properties.setProperty("hibernate.format_sql", "true");
+		
+		return properties;
+	}
+
+	
+	@Bean
+	public HibernateTransactionManager getHibernateTransactionManager(SessionFactory sessionFactory) {
+		HibernateTransactionManager ht=new HibernateTransactionManager();
+		ht.setSessionFactory(sessionFactory);
+		return ht;
+	}
+
+
+
+
+Spring JSP application:
+-----------------------
+
+
+@Controller
+public class AccountController {
+
+	private AccountService accountService;
+
+	@Autowired
+	public AccountController(AccountService accountService) {
+		this.accountService = accountService;
+	}
+
+	
+
+	@GetMapping(path = "accounts")
+	public String allAccountsV2(ModelMap model) {
+		model.addAttribute("accountsList", accountService.getAll());
+		return "accounts";
+	}
+
+
+	@GetMapping(value = "transfer")
+	public String showAccountTransferForm(ModelMap map) {
+		map.addAttribute("accountDto", new AccountDto());
+		return "accountform";
+	}
+
+	//correct way
+	@PostMapping(value = "transfer")
+	public String submittedAccountTransferForm(AccountDto accountDto, Model model) {
+		
+		accountService.transfer(accountDto.getFrom(), accountDto.getTo(), accountDto.getMoney());
+		model.addAttribute("accountDto", accountDto);//i am putting the data  into req scope
+		return "redirect:transfersuccess";
+		//redirect:transfersuccess used to do redirect to the url (not the jsp page) transfersuccess
+		
+	}
+	
+
+	@GetMapping(value = "transfersuccess")
+	public String transfersuccessMethod() {
+		return "transfersuccess";
+	}
+
+}
+
+
+
+accounts.jsp
+--------------
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Champs bank app</title>
+</head>
+<body>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>accout id</th>
+				<th>account holder name</th>
+				<th>account balance</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach items="${accountsList}" var="account">
+				<tr>
+					<td>${account.id}</td>
+					<td>${account.name}</td>
+					<td>${account.balance}</td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
+	<br>
+	<a href="transfer">transfer request</a>
+</body>
+</html>
+
+
+
+
+accountform.jsp
+-----------------
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"  %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Champ bank fund tranfer</title>
+</head>
+<body>
+<form:form action="transfer" method="post" modelAttribute="accountDto">
+	Enter from account:<form:input path="from"/><br/>
+	Enter to amount:<form:input path="to"/><br/>
+	Enter money to transfer:<form:input path="money"/><br/>
+	<input type ="submit"/>
+</form:form>
+
+</body>
+</html>
+
+
+
+
+
+
+transfersuccess.jsp
+-------------------
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Champ bank app transfer message</title>
+</head>
+<body>
+fund is transfer successfully
+${accountDto.from }<br/>
+${accountDto.to }<br/>
+${accountDto.money }<br/>
+<a href="accounts">all accounts</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Spring boot bank application:
+---------------------------------
+
+Step 1: add dependencies
+
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+	<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.3.0</version>
+	</dependency>
+
+
+
+Step 2: add to property file
+
+spring.mvc.view.prefix:/WEB-INF/views/
+spring.mvc.view.suffix:.jsp
+
+
+
+
+Hibernate + spring integration:
+------------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+	<context:component-scan base-package="com.bankapp"/>
+	<aop:aspectj-autoproxy/>
+	
+	<context:property-placeholder location="classpath:db.properties"/>
+	
+	<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${jdbc.driver}"/>
+		<property name="url" value="${jdbc.url}"/>
+		<property name="username" value="${jdbc.username}"/>
+		<property name="password" value="${jdbc.password}"/>
+	</bean>
+	
+	<bean id="sf" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="ds"/>
+		<property name="packagesToScan">
+			<list>
+				<value>com.bankapp.entities</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL57Dialect</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sf"/>
+	</bean>
+	
+	<tx:annotation-driven transaction-manager="transactionManager"/>	<!-- hey spring i wnant to do declartive tx -->
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
