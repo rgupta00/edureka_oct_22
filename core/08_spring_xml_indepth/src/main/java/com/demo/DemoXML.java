@@ -6,6 +6,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class DemoXML {
 
 	public static void main(String[] args) {
-		ApplicationContext ctx=new ClassPathXmlApplicationContext("lifecycle.xml");
+		ApplicationContext ctx=new ClassPathXmlApplicationContext("bank.xml");
+		
+		Bank bank=ctx.getBean("bank", Bank.class);
+		bank.printDetails();
 	}
 }

@@ -167,7 +167,9 @@ Session 2:
 5. spring jdbc , jdbc template
 
 
+Spring is like a "glue" framework
 
+spring + aspectJ (AOP framework)
 
 
 

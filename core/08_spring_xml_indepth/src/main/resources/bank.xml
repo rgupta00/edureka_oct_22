@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="bank" class="com.demo.Bank">
+		<property name="bankName" value="SBI"/>
+		<property name="accounts">
+			<set>
+				<ref bean="acc1"/>
+				<ref bean="acc2"/>
+				<ref bean="acc3"/>
+				<ref bean="acc4"/>
+			</set>
+		</property>
+		
+		<property name="branches">
+			<map>
+				<entry key="krishnaNagar" value-ref="loc1"></entry>
+				<entry key="BTM" value-ref="loc2"></entry>
+				
+			</map>
+		</property>
+		
+		<property name="customerCount">
+			<props>
+				<prop key="krishnaNagar">5000</prop>
+				<prop key="BTM">4000</prop>
+			</props>
+		</property>
+	</bean>
+
+
+<bean id="loc1" class="com.demo.BranchLocation">
+	<property name="address" value="Krishna nagar "/>
+	<property name="city" value="Delhi"></property>
+</bean>
+
+<bean id="loc2" class="com.demo.BranchLocation">
+	<property name="address" value="BTM"/>
+	<property name="city" value="Banglore"></property>
+</bean>
+
+
+
+<bean id="acc4" class="com.demo.Account">
+		<property name="id" value="333"/>
+		<property name="name" value="raja"/>
+		<property name="balance" value="5000"/>
+	</bean>
+	
+	<bean id="acc1" class="com.demo.Account">
+		<property name="id" value="333"/>
+		<property name="name" value="raja"/>
+		<property name="balance" value="5000"/>
+	</bean>
+
+
+	<bean id="acc2" class="com.demo.Account">
+		<property name="id" value="313"/>
+		<property name="name" value="amit"/>
+		<property name="balance" value="5000"/>
+	</bean>
+	
+	
+	<bean id="acc3" class="com.demo.Account">
+		<property name="id" value="33"/>
+		<property name="name" value="sumit"/>
+		<property name="balance" value="5000"/>
+	</bean>
+	
+</beans>

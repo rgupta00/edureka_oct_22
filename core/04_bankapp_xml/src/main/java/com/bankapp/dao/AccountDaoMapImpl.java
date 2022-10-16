@@ -25,6 +25,9 @@ private Map<Integer, Account> accounts=new HashMap<>();
 
 	@Override
 	public void updateAccount(Account account) {
+		try {
+			Thread.sleep(1000);
+		}catch(InterruptedException ex) {}
 		accounts.put(account.getId(), account);
 	}
 

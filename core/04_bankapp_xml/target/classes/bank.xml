@@ -8,5 +8,5 @@
 		<property name="accountDao" ref="accountDao"></property>
 	</bean>
 	
-	<bean id="accountDao" class="com.bankapp.dao.AccountDaoJdbcImpl"/>
+	<bean id="accountDao" class="com.bankapp.dao.AccountDaoMapImpl"/>
 </beans>
