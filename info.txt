@@ -331,6 +331,87 @@ AOP:
 	
 	
 	
+	
+	
+	
+Session 3: agenda
+------------------
+1. AOP and applications
+2. jdbc quick revision, issues with jdbc
+3. spring jdbc: jdbcTemplate how to do config in xml and java config
+
+
+	
+	
+	Books :
+	begining spring 4.x
+	spring in action 4th edition
+	
+	https://www.amazon.in/Beginning-Spring-Mert-Caliskan/dp/1118892925
+	https://github.com/andriyanov-roman/planet/blob/master/Craig%20Walls%20-%20Spring%20in%20Action%204th%20Edition%20-%202014.pdf
+	
+	
+	
+	
+	how to do tx mgt in jdbc
+	
+	try{
+	con.setAutoCommit(false);
+	
+	
+	
+	con.commit();
+	}catch(..........){
+		con.rollback();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	What are the step for spring jdbc configration
+	
+------------------------------
+1. put the relevent jar files
+2. you need to configure jdbc connection with spring using property file
+3. u need to confgure declearitive mgt
+
+4. using jdbc template to reduce no of lines of code
+
+
+	
+	
+	
+	
+
+session 4: pls revise hibernate basics
+-----------------------------------------
+Pre req:
+ *basic understanding of hibernate
+ * basic of servlet api
+ 
+1. hibernate jpa quick intro, issue with hibernate
+2. spring hibernate integration
+3. spring mvc fundamentals
+
+
+	:)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 @Configuration
 @ComponentScan(basePackages = { "com.bankapp" })
 //<context:component-scan base-package="com.bankapp"/>

@@ -12,7 +12,7 @@
     <Loggers>
         <!-- <Logger name="com.demo" level="info"/> -->
 
-        <Root level="info">
+        <Root level="error">
             <AppenderRef ref="STDOUT"/>
             <AppenderRef ref="FILE"/>
         </Root>

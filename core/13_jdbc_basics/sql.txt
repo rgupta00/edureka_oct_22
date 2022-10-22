@@ -1,0 +1,11 @@
+ create table account2(id int not null primary key auto_increment, name varchar(100) not null, balance double not null);
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> insert into accounts(name, balance) values('ravi',1000);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into accounts(name, balance) values('sumit',1000);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from account1;
+ERROR 1146 (42S02): Table 'edu123.account1' doesn't exist
