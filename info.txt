@@ -761,7 +761,7 @@ session 4: pls revise hibernate basics
 -----------------------------------------
 Pre req:
  *basic understanding of hibernate
- * basic of servlet api
+ * basic of servlet api, tomcat configure vs weblogic
  
 1. hibernate jpa quick intro, issue with hibernate
 2. spring hibernate integration
@@ -964,6 +964,17 @@ Hibernate + spring integration:
 
 
 
+Session 5 plan:
+------------------
+* spring mvc in details
+
+	<--------------><-------><---------------> db
+	web		service	dao layer
+ CRUD operation
+ 
+*Spring REST: how to create rest end points
+
+*Spring Boot
 
 
 
@@ -971,8 +982,18 @@ Hibernate + spring integration:
 
 
 
+some video to refer:
 
 
+hibernate orm basics in depth
+https://zoom.us/rec/share/MWZ6Jb_ECzKj3KIX-wHRO94NiZZwLp9TaiA0XFEkAI02uqo3k2U3WhjA1R_viNC4.rxXph1RFWXkJNCAY?startTime=1625543731000
+https://zoom.us/rec/share/j56PZW0wGWcHvFDM9wxXdseVM2QNT-9zUXFpt6YX-CKF-C28yG5t77ApIzX5Dva7.JiofD-rVWybOjQAi?startTime=1625566967000
+
+
+
+servlet jsp basics in depth
+https://zoom.us/rec/share/XRIE9P7wi6MA91naGoO_APm-ZSchc0EiTuqBVUJpsjeRAS_TqOGHAhE4WFfCUMPw.IAtC6bGu8N0k_5Ys?startTime=1625630103000
+https://zoom.us/rec/share/Cz1iqlxI1MACoypVXXNMqE3_Q159651zm0RVhRfSbSQ9MExzt6dCxpvDtideg253.TarMIv5NZm6q1FqP?startTime=1625655158000
 
 
 

@@ -1,0 +1,1 @@
+ERROR | 2022-10-22 07:52:59 | [main] util.LoggingAspect (LoggingAspect.java:32) - excetpion :com.bankapp.exception.BankAccountNotFoundExcetion: account with id 20 is not found

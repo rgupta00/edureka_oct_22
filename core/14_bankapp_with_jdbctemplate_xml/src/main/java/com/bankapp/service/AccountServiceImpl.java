@@ -14,7 +14,7 @@ import com.bankapp.dao.AccountDao;
 import com.bankapp.dao.AccountDaoMapImpl;
 import com.bankapp.exception.BankAccountNotFoundExcetion;
 @Service(value = "bs")
-@Transactional(isolation = Isolation.REPEATABLE_READ)
+@Transactional
 //declartive way to handle ACID under the hood @Around advice 
 final public class AccountServiceImpl implements AccountService {
 
@@ -27,11 +27,13 @@ final public class AccountServiceImpl implements AccountService {
 		this.accountDao = accountDao;
 	}
 
+	@Transactional(readOnly = true)
 	@Override
 	public List<Account> getAll() {
 		return accountDao.getAll();
 	}
 
+	@Transactional(readOnly = true)
 	@Override
 	public Account getById(int id) {
 		Account account= accountDao.getById(id);

@@ -1,29 +1,34 @@
 package com.crud;
 
 public class AccountData {
+	private int id;
 	private String name;
-	private Double balance;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Double getBalance() {
-		return balance;
-	}
-	public void setBalance(Double balance) {
-		this.balance = balance;
-	}
-	public AccountData(String name, Double balance) {
+	
+	
+	public AccountData(int id, String name) {
+		this.id = id;
 		this.name = name;
-		this.balance = balance;
 	}
 	public AccountData() {}
+	
 	@Override
 	public String toString() {
-		return "AccountData [name=" + name + ", balance=" + balance + "]";
+		return "AccountData [id=" + id + ", name=" + name + "]";
 	}
+	
 	
 	
 }
