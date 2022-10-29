@@ -21,7 +21,7 @@ public class Main {
 		List<Account> accounts=accountService.getAll();
 		accounts.forEach(a-> System.out.println(a));
 		
-		accountService.transfer(2, 1,100);
+		accountService.transfer(2, 1,10);
 //		
 		accounts=accountService.getAll();
 		accounts.forEach(a-> System.out.println(a));

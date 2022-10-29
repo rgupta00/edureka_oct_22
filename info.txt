@@ -555,203 +555,6 @@ Spring jdbc:
 
 
 
-     
-
-
-
-Spring JSP application:
------------------------
-
-
-@Controller
-public class AccountController {
-
-	private AccountService accountService;
-
-	@Autowired
-	public AccountController(AccountService accountService) {
-		this.accountService = accountService;
-	}
-
-	
-
-	@GetMapping(path = "accounts")
-	public String allAccountsV2(ModelMap model) {
-		model.addAttribute("accountsList", accountService.getAll());
-		return "accounts";
-	}
-
-
-	@GetMapping(value = "transfer")
-	public String showAccountTransferForm(ModelMap map) {
-		map.addAttribute("accountDto", new AccountDto());
-		return "accountform";
-	}
-
-	//correct way
-	@PostMapping(value = "transfer")
-	public String submittedAccountTransferForm(AccountDto accountDto, Model model) {
-		
-		accountService.transfer(accountDto.getFrom(), accountDto.getTo(), accountDto.getMoney());
-		model.addAttribute("accountDto", accountDto);//i am putting the data  into req scope
-		return "redirect:transfersuccess";
-		//redirect:transfersuccess used to do redirect to the url (not the jsp page) transfersuccess
-		
-	}
-	
-
-	@GetMapping(value = "transfersuccess")
-	public String transfersuccessMethod() {
-		return "transfersuccess";
-	}
-
-}
-
-
-
-accounts.jsp
---------------
-
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Champs bank app</title>
-</head>
-<body>
-	<table border="1">
-		<thead>
-			<tr>
-				<th>accout id</th>
-				<th>account holder name</th>
-				<th>account balance</th>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach items="${accountsList}" var="account">
-				<tr>
-					<td>${account.id}</td>
-					<td>${account.name}</td>
-					<td>${account.balance}</td>
-				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
-	<br>
-	<a href="transfer">transfer request</a>
-</body>
-</html>
-
-
-
-
-accountform.jsp
------------------
-
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"  %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Champ bank fund tranfer</title>
-</head>
-<body>
-<form:form action="transfer" method="post" modelAttribute="accountDto">
-	Enter from account:<form:input path="from"/><br/>
-	Enter to amount:<form:input path="to"/><br/>
-	Enter money to transfer:<form:input path="money"/><br/>
-	<input type ="submit"/>
-</form:form>
-
-</body>
-</html>
-
-
-
-
-
-
-transfersuccess.jsp
--------------------
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Champ bank app transfer message</title>
-</head>
-<body>
-fund is transfer successfully
-${accountDto.from }<br/>
-${accountDto.to }<br/>
-${accountDto.money }<br/>
-<a href="accounts">all accounts</a>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Spring boot bank application:
----------------------------------
-
-Step 1: add dependencies
-
-		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-		</dependency>
-	<dependency>
-			<groupId>javax.xml.bind</groupId>
-			<artifactId>jaxb-api</artifactId>
-			<version>2.3.0</version>
-	</dependency>
-
-
-
-Step 2: add to property file
-
-spring.mvc.view.prefix:/WEB-INF/views/
-spring.mvc.view.suffix:.jsp
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -975,6 +778,243 @@ Session 5 plan:
 *Spring REST: how to create rest end points
 
 *Spring Boot
+
+
+
+
+
+
+
+
+Session 5:
+1. spring MVC arch xml config vs java config
+2. Spring mvc crud applicatation
+3. Spring REST mvc
+4. spring boot basics
+
+
+
+
+
+Displaying all accounts:
+----------------------
+
+
+accounts.jsp
+--------------
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Champs bank app</title>
+</head>
+<body>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>accout id</th>
+				<th>account holder name</th>
+				<th>account balance</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach items="${accountsList}" var="account">
+				<tr>
+					<td>${account.id}</td>
+					<td>${account.name}</td>
+					<td>${account.balance}</td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
+	<br>
+	<a href="transfer">transfer request</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+Spring JSP application:
+-----------------------
+
+
+@Controller
+public class AccountController {
+
+	private AccountService accountService;
+
+	@Autowired
+	public AccountController(AccountService accountService) {
+		this.accountService = accountService;
+	}
+
+	
+
+	@GetMapping(path = "accounts")
+	public String allAccountsV2(ModelMap model) {
+		model.addAttribute("accountsList", accountService.getAll());
+		return "accounts";
+	}
+
+
+	@GetMapping(value = "transfer")
+	public String showAccountTransferForm(ModelMap map) {
+		map.addAttribute("accountDto", new AccountDto());
+		return "accountform";
+	}
+
+	//correct way
+	@PostMapping(value = "transfer")
+	public String submittedAccountTransferForm(AccountDto accountDto, Model model) {
+		
+		accountService.transfer(accountDto.getFrom(), accountDto.getTo(), accountDto.getMoney());
+		model.addAttribute("accountDto", accountDto);//i am putting the data  into req scope
+		return "redirect:transfersuccess";
+		//redirect:transfersuccess used to do redirect to the url (not the jsp page) transfersuccess
+		
+	}
+	
+
+	@GetMapping(value = "transfersuccess")
+	public String transfersuccessMethod() {
+		return "transfersuccess";
+	}
+
+}
+
+
+
+
+
+accountform.jsp
+-----------------
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"  %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Champ bank fund tranfer</title>
+</head>
+<body>
+<form:form action="transfer" method="post" modelAttribute="accountDto">
+	Enter from account:<form:input path="from"/><br/>
+	Enter to amount:<form:input path="to"/><br/>
+	Enter money to transfer:<form:input path="money"/><br/>
+	<input type ="submit"/>
+</form:form>
+
+</body>
+</html>
+
+
+
+
+
+
+transfersuccess.jsp
+-------------------
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Champ bank app transfer message</title>
+</head>
+<body>
+fund is transfer successfully
+${accountDto.from }<br/>
+${accountDto.to }<br/>
+${accountDto.money }<br/>
+<a href="accounts">all accounts</a>
+</body>
+</html>
+
+
+
+
+
+
+Session 6:
+===============
+	spring boot 
+	:)
+	all can be revised in one session :)
+	REST
+	
+session 7:
+	Spring sec + boot + jwt
+	
+	
+session 8:
+
+	how to use spring integration
+	How to get startd wtih Spring microservice
+	
+	
+	Road map: for next 6month
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+Spring boot bank application:
+---------------------------------
+
+Step 1: add dependencies
+
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+	<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.3.0</version>
+	</dependency>
+
+
+
+Step 2: add to property file
+
+spring.mvc.view.prefix:/WEB-INF/views/
+spring.mvc.view.suffix:.jsp
+
+
+
+	
+
+
+
+
+
 
 
 
