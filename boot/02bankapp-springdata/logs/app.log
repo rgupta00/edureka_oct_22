@@ -1,0 +1,18 @@
+2022-10-30 09:34:47,024 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 46889 (/home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata)
+2022-10-30 09:34:47,029 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-10-30 09:34:47,323 INFO c.b.Application [restartedMain] Started Application in 0.333 seconds (JVM running for 33.114)
+2022-10-30 09:35:10,931 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 46889 (/home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata)
+2022-10-30 09:35:10,932 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-10-30 09:35:11,212 INFO c.b.Application [restartedMain] Started Application in 0.311 seconds (JVM running for 57.003)
+2022-10-30 09:35:23,769 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 46889 (/home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata)
+2022-10-30 09:35:23,770 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-10-30 09:35:24,042 INFO c.b.Application [restartedMain] Started Application in 0.299 seconds (JVM running for 69.833)
+2022-10-30 09:35:31,603 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 46889 (/home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata)
+2022-10-30 09:35:31,603 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-10-30 09:35:31,838 INFO c.b.Application [restartedMain] Started Application in 0.261 seconds (JVM running for 77.629)
+2022-10-30 09:35:45,286 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 47381 (/home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata)
+2022-10-30 09:35:45,293 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-10-30 09:35:47,561 INFO c.b.Application [restartedMain] Started Application in 2.51 seconds (JVM running for 3.0)
+2022-10-30 09:36:54,797 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 47768 (/home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata)
+2022-10-30 09:36:54,803 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-10-30 09:36:57,255 INFO c.b.Application [restartedMain] Started Application in 2.711 seconds (JVM running for 3.204)

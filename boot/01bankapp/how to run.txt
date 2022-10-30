@@ -1,0 +1,57 @@
+http://localhost:8090/bankapp/api/accounts
+
+[
+  {
+    "id": 1,
+    "name": "ravi",
+    "balance": 1000,
+    "email": "ravi@gmail.com",
+    "phone": "5566656565"
+  },
+  {
+    "id": 2,
+    "name": "sumit",
+    "balance": 1000,
+    "email": "sumit@gmail.com",
+    "phone": "8866656560"
+  }
+]
+
+
+http://localhost:8090/bankapp/api/accounts/1
+
+
+Post
+http://localhost:8090/bankapp/api/transfer
+
+{
+	"fromAccId":1,
+	"toAccId":2,
+	"amount":10
+}
+
+op that fund is transfered successfully
+
+
+
+http://localhost:8090/bankapp/api/deposit
+
+{
+	"accId":1,
+	"amount":10
+}
+
+op that fund is deposit successfully
+
+
+http://localhost:8090/bankapp/api/withdraw
+
+{
+	"accId":1,
+	"amount":10
+}
+
+op that fund is withdraw successfully
+
+
+
