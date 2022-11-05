@@ -953,9 +953,38 @@ Session 6:
 	:)
 	all can be revised in one session :)
 	REST
+	Spring boot basics
+	Spring boot REST
+	SPring boot data
+	
+	Spring boot ResponseEntity: u want to send correct http status code
+		post: 201
+		delete: 204
+		if not found : 404
+		...
+		...
+		...
+		ResponseEntity: wrapper container 2 things
+			data + status code
+			
+			
+			
+	
+	...
+	
 	
 session 7:
-	Spring sec + boot + jwt
+==============
+	Spring boot rest
+	Spring boot ex handing
+	Spring boot validattion
+	Spring boot HATEOS
+	Spring boot caching
+	Spring boot schedule process
+	Spring boot swagger
+	Spring boot security
+	Spring boot messaging
+	Spring sec + boot
 	
 	
 session 8:

@@ -1,4 +1,4 @@
-package com.bankapp.dao;
+package com.bankapp.dto;
 
 import java.time.LocalDateTime;
 
