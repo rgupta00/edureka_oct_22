@@ -3,6 +3,9 @@ package com.productapp.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,8 +26,7 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public List<Product> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return productDao.findAll();
 	}
 
 	@Override
@@ -51,6 +53,25 @@ public class ProductServiceImpl implements ProductService {
 		return null;
 	}
 
+	@Override
+	public List<Product> findAllWithSorting(String field) {
+		return productDao.findAll(Sort.by(Sort.Direction.ASC, field));
+	}
+
+	@Override
+	public Page<Product> findAllWithPagination(int offset, int pageSize) {
+		return productDao.findAll(PageRequest.of(offset, pageSize));
+	}
+
+	@Override
+	public Page<Product> findAllWithPaginationAndSorting(int offset, int pageSize, String field) {
+		return productDao.findAll(PageRequest.of(offset, pageSize).withSort(Sort.by(field)));
+	}
+
 
 
 }
+
+
+
+

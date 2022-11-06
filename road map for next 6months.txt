@@ -1,0 +1,67 @@
+What we shold do after this training:
+------------------------------------
+
+java backend:
+
+core , dp and dsa
+
+Spring core: di, xml anno "java config"
+Spring AOP
+
+Skip
+Spring hib integeration
+spring jdbc ...........
+
+
+
+Spring MVC arch
+Spring REST
+
+master: spring boot and rest
+	secuirty
+	
+	rabbitMQ* recorded video on this topics
+		asyn messaging
+		
+	
+	Kafka
+	
+Spring integration : not req if not having lagacy software
+
+Spring integration vs camel
+https://www.youtube.com/watch?v=q5nakRnfG4s&list=PLYwGWvgqiQCnRUzcdP1h6l-d9fRjP-Ed7&index=1&t=2684s
+
+
+Spring boot microservice 
+
+Docker
+
+k8s
+
+
+:)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

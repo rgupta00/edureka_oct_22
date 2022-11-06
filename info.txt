@@ -986,17 +986,151 @@ session 7:
 	Spring boot messaging
 	Spring sec + boot
 	
+
+	
+
 	
 session 8:
-
-	how to use spring integration
+==============
+	Spring boot security
+	Spring data in details, pagination, Joins*
+	
+	Spring boot messaging, rabbit MQ
+	Spring boot End to end application
 	How to get startd wtih Spring microservice
+	Spring integration
+	
+	
 	
 	
 	Road map: for next 6month
 	
-	
 
+
+
+method level security:
+----------------------
+
+spring sec?
+-----------
+url pattern
+
+method level sec (AOP)
+object level sec
+
+
+step 1:
+
+@EnableGlobalMethodSecurity(prePostEnabled = true, jsr250Enabled = true, securedEnabled = true)
+@SpringBootApplication
+
+
+step 2:
+------------
+
+public class SecConfig extends WebSecurityConfigurerAdapter{
+	//---------
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http.csrf().disable()
+		.authorizeRequests()
+		.anyRequest().authenticated()
+		.and()
+		.httpBasic()
+		.and()
+		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+	}
+	//---------
+}
+
+
+step 3:
+---------
+
+
+public interface ProductService {
+	@PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_MGR')")
+	public List<Product> findAll();
+	
+	@PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_MGR')")
+	public Product getById(int id);
+	
+	//@PreAuthorize("hasAuthority('ROLE_ADMIN')")
+	public Product addProduct(Product product);
+	
+	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
+	public Product updateProduct(int id, Product product);
+	
+	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
+	//@PostAuthorize("returnObject.vendorName==authentication.name")
+	//@Secured({"ROLE_ADMIN","ROLE_MGR"})
+	public Product deleteProduct(int id);
+	
+}
+
+step 4: write handler for it
+--------------------------
+
+ @ExceptionHandler(AccessDeniedException.class)
+    public final ResponseEntity<ErrorDetails> handleAccessDeniedException(AccessDeniedException ex) {
+    	ErrorDetails details = new ErrorDetails();
+		details.setDate(LocalDateTime.now());
+		details.setName("rgupta.mtech@gmail.com");
+		details.setDetails(ex.getMessage());
+        return new ResponseEntity<>(details, HttpStatus.FORBIDDEN);
+   }
+    
+
+
+
+@Component
+public class AppAuthenticationEntryPoint implements AuthenticationEntryPoint {
+    @Override
+    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
+        response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized");
+    }
+
+}
+
+
+@Configuration
+public class CorsConfiguration {
+
+    private static final String GET = "GET";
+    private static final String POST = "POST";
+    private static final String PUT = "PUT";
+    private static final String DELETE = "DELETE";
+
+    @Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurer() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/**")
+                        .allowedMethods(GET, POST, PUT, DELETE)
+                        .allowedHeaders("*")
+                        .allowedOriginPatterns("*")
+                        .allowCredentials(true);
+            }
+        };
+    }
+}
+
+
+
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http.cors();
+		http.csrf().disable().authorizeRequests()
+		.anyRequest().authenticated()
+		.and()
+		.exceptionHandling().authenticationEntryPoint(authenticationEntryPoint)
+		.and().sessionManagement()
+		.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+	}
+
+Note : to get currently loggedin user in controller layer user
+@authenticationprincipal
 
 
 

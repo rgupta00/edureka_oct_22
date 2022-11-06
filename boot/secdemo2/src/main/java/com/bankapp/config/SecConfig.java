@@ -23,6 +23,8 @@ public class SecConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private UserDetailsService userDetailsService;
 	
+	//authentication : who are you?
+	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userDetailsService);
@@ -41,6 +43,7 @@ public class SecConfig extends WebSecurityConfigurerAdapter {
 	public void configure(WebSecurity web) throws Exception {
 		web.ignoring().antMatchers("/h2/**");
 	}
+	
 	//for authrization: 403
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
@@ -51,9 +54,10 @@ public class SecConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/clerk/**").hasAnyRole("ADMIN","MGR", "CLERK")
 		.antMatchers("/home/**").permitAll()
 		.and()
-		.httpBasic()
+	
+		.httpBasic()	//as it is REST i dont need login page or ui
 		.and()
-		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);	//must be statelesss
 	}
 
 }

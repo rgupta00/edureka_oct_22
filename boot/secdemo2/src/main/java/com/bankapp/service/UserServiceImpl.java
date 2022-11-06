@@ -23,7 +23,7 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public void addUserEntity(UserEntity userEntity) {
-		userEntity.setPassword(encoder.encode(userEntity.getPassword()));
+		userEntity.setPassword(encoder.encode(userEntity.getPassword()));// dont forget to encrpt password before saving to db
 		entityRepo.save(userEntity);
 	}
 

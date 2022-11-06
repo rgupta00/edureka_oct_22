@@ -1,0 +1,136 @@
+2022-10-30 09:34:47,024 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 46889 (/home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata)
+2022-10-30 09:34:47,029 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-10-30 09:34:47,323 INFO c.b.Application [restartedMain] Started Application in 0.333 seconds (JVM running for 33.114)
+2022-10-30 09:35:10,931 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 46889 (/home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata)
+2022-10-30 09:35:10,932 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-10-30 09:35:11,212 INFO c.b.Application [restartedMain] Started Application in 0.311 seconds (JVM running for 57.003)
+2022-10-30 09:35:23,769 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 46889 (/home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata)
+2022-10-30 09:35:23,770 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-10-30 09:35:24,042 INFO c.b.Application [restartedMain] Started Application in 0.299 seconds (JVM running for 69.833)
+2022-10-30 09:35:31,603 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 46889 (/home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata)
+2022-10-30 09:35:31,603 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-10-30 09:35:31,838 INFO c.b.Application [restartedMain] Started Application in 0.261 seconds (JVM running for 77.629)
+2022-10-30 09:35:45,286 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 47381 (/home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata)
+2022-10-30 09:35:45,293 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-10-30 09:35:47,561 INFO c.b.Application [restartedMain] Started Application in 2.51 seconds (JVM running for 3.0)
+2022-10-30 09:36:54,797 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 47768 (/home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/02bankapp-springdata)
+2022-10-30 09:36:54,803 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-10-30 09:36:57,255 INFO c.b.Application [restartedMain] Started Application in 2.711 seconds (JVM running for 3.204)
+2022-10-30 09:45:45,873 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 49478 (/home/raj/Documents/edureka_oct_22/boot/03bankapp-statuscode-validation/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/03bankapp-statuscode-validation)
+2022-10-30 09:45:45,904 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-10-30 09:45:48,174 INFO c.b.Application [restartedMain] Started Application in 2.519 seconds (JVM running for 2.994)
+2022-10-30 09:48:12,952 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 49478 (/home/raj/Documents/edureka_oct_22/boot/03bankapp-statuscode-validation/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/03bankapp-statuscode-validation)
+2022-10-30 09:48:12,952 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-10-30 09:48:13,247 INFO c.b.Application [restartedMain] Started Application in 0.323 seconds (JVM running for 148.067)
+2022-10-30 09:58:08,828 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 51688 (/home/raj/Documents/edureka_oct_22/boot/03bankapp-statuscode-validation/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/03bankapp-statuscode-validation)
+2022-10-30 09:58:08,835 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-10-30 09:58:11,111 INFO c.b.Application [restartedMain] Started Application in 2.521 seconds (JVM running for 2.997)
+2022-10-30 10:02:00,584 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 52652 (/home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2)
+2022-10-30 10:02:00,589 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-10-30 10:02:02,940 INFO c.b.Application [restartedMain] Started Application in 2.593 seconds (JVM running for 3.087)
+2022-11-05 06:37:19,755 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 27440 (/home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2)
+2022-11-05 06:37:19,759 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-05 06:37:21,454 INFO c.b.Application [restartedMain] Started Application in 1.894 seconds (JVM running for 2.329)
+2022-11-05 07:04:08,221 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 27440 (/home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2)
+2022-11-05 07:04:08,222 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-05 07:04:08,473 INFO c.b.Application [restartedMain] Started Application in 0.278 seconds (JVM running for 1609.348)
+2022-11-05 07:06:51,430 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 27440 (/home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2)
+2022-11-05 07:06:51,431 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-05 07:06:51,672 INFO c.b.Application [restartedMain] Started Application in 0.268 seconds (JVM running for 1772.547)
+2022-11-05 07:07:24,637 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 32979 (/home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2)
+2022-11-05 07:07:24,642 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-05 07:07:26,829 INFO c.b.Application [restartedMain] Started Application in 2.418 seconds (JVM running for 2.918)
+2022-11-05 07:08:15,966 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 33215 (/home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2)
+2022-11-05 07:08:15,971 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-05 07:08:18,231 INFO c.b.Application [restartedMain] Started Application in 2.496 seconds (JVM running for 2.984)
+2022-11-05 07:08:31,019 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 33215 (/home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2)
+2022-11-05 07:08:31,019 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-05 07:08:31,282 INFO c.b.Application [restartedMain] Started Application in 0.294 seconds (JVM running for 16.035)
+2022-11-05 07:08:54,066 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 33215 (/home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2)
+2022-11-05 07:08:54,067 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-05 07:08:54,311 INFO c.b.Application [restartedMain] Started Application in 0.272 seconds (JVM running for 39.063)
+2022-11-05 07:09:46,145 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 33215 (/home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2)
+2022-11-05 07:09:46,145 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-05 07:09:46,378 INFO c.b.Application [restartedMain] Started Application in 0.257 seconds (JVM running for 91.131)
+2022-11-05 07:22:15,238 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 35758 (/home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2)
+2022-11-05 07:22:15,244 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-05 07:22:17,642 INFO c.b.Application [restartedMain] Started Application in 2.61 seconds (JVM running for 3.11)
+2022-11-05 07:23:57,545 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 35758 (/home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2)
+2022-11-05 07:23:57,545 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-05 07:23:57,827 INFO c.b.Application [restartedMain] Started Application in 0.316 seconds (JVM running for 103.295)
+2022-11-05 07:27:46,902 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 35758 (/home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2)
+2022-11-05 07:27:46,903 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-05 07:27:47,170 INFO c.b.Application [restartedMain] Started Application in 0.297 seconds (JVM running for 332.638)
+2022-11-05 07:29:39,097 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 35758 (/home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2)
+2022-11-05 07:29:39,097 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-05 07:29:39,400 INFO c.b.Application [restartedMain] Started Application in 0.331 seconds (JVM running for 444.867)
+2022-11-05 07:29:51,187 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 35758 (/home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2)
+2022-11-05 07:29:51,188 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-05 07:29:51,420 INFO c.b.Application [restartedMain] Started Application in 0.254 seconds (JVM running for 456.888)
+2022-11-05 07:31:57,331 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 35758 (/home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2)
+2022-11-05 07:31:57,331 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-05 07:31:57,563 INFO c.b.Application [restartedMain] Started Application in 0.256 seconds (JVM running for 583.031)
+2022-11-05 07:32:10,325 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 35758 (/home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2)
+2022-11-05 07:32:10,325 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-05 07:32:10,577 INFO c.b.Application [restartedMain] Started Application in 0.274 seconds (JVM running for 596.045)
+2022-11-05 07:33:19,422 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 35758 (/home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2)
+2022-11-05 07:33:19,422 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-05 07:33:19,665 INFO c.b.Application [restartedMain] Started Application in 0.263 seconds (JVM running for 665.133)
+2022-11-05 07:33:55,474 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 35758 (/home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2)
+2022-11-05 07:33:55,475 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-05 07:33:55,708 INFO c.b.Application [restartedMain] Started Application in 0.256 seconds (JVM running for 701.176)
+2022-11-05 07:34:40,491 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 35758 (/home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2)
+2022-11-05 07:34:40,491 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-05 07:34:40,727 INFO c.b.Application [restartedMain] Started Application in 0.254 seconds (JVM running for 746.194)
+2022-11-05 07:35:18,514 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 35758 (/home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/04bankapp-statuscode-validation-h2)
+2022-11-05 07:35:18,515 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-05 07:35:18,737 INFO c.b.Application [restartedMain] Started Application in 0.244 seconds (JVM running for 784.205)
+2022-11-06 07:19:38,145 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 15082 (/home/raj/Documents/edureka_oct_22/boot/09bankapp-security/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/09bankapp-security)
+2022-11-06 07:19:38,149 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-06 07:20:00,354 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 15231 (/home/raj/Documents/edureka_oct_22/boot/09bankapp-security/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/09bankapp-security)
+2022-11-06 07:20:00,359 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-06 07:20:02,799 INFO c.b.Application [restartedMain] Started Application in 2.676 seconds (JVM running for 3.176)
+2022-11-06 07:21:48,499 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 15891 (/home/raj/Documents/edureka_oct_22/boot/09bankapp-security/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/09bankapp-security)
+2022-11-06 07:21:48,505 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-06 07:21:51,186 INFO c.b.Application [restartedMain] Started Application in 2.907 seconds (JVM running for 3.418)
+2022-11-06 07:23:02,027 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 15891 (/home/raj/Documents/edureka_oct_22/boot/09bankapp-security/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/09bankapp-security)
+2022-11-06 07:23:02,027 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-06 07:28:42,793 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 18090 (/home/raj/Documents/edureka_oct_22/boot/09bankapp-security/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/09bankapp-security)
+2022-11-06 07:28:42,799 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-06 07:28:45,470 INFO c.b.Application [restartedMain] Started Application in 2.928 seconds (JVM running for 3.385)
+2022-11-06 07:31:43,546 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 18090 (/home/raj/Documents/edureka_oct_22/boot/09bankapp-security/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/09bankapp-security)
+2022-11-06 07:31:43,546 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-06 07:31:43,899 INFO c.b.Application [restartedMain] Started Application in 0.401 seconds (JVM running for 181.813)
+2022-11-06 07:34:31,184 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 19160 (/home/raj/Documents/edureka_oct_22/boot/09bankapp-security/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/09bankapp-security)
+2022-11-06 07:34:31,189 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-06 07:34:33,943 INFO c.b.Application [restartedMain] Started Application in 3.039 seconds (JVM running for 3.511)
+2022-11-06 07:35:49,807 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 19160 (/home/raj/Documents/edureka_oct_22/boot/09bankapp-security/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/09bankapp-security)
+2022-11-06 07:35:49,808 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-06 07:35:50,158 INFO c.b.Application [restartedMain] Started Application in 0.381 seconds (JVM running for 79.726)
+2022-11-06 07:36:55,046 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 19160 (/home/raj/Documents/edureka_oct_22/boot/09bankapp-security/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/09bankapp-security)
+2022-11-06 07:36:55,046 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-06 07:36:55,383 INFO c.b.Application [restartedMain] Started Application in 0.364 seconds (JVM running for 144.95)
+2022-11-06 07:38:23,328 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 19160 (/home/raj/Documents/edureka_oct_22/boot/09bankapp-security/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/09bankapp-security)
+2022-11-06 07:38:23,328 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-06 07:38:23,677 INFO c.b.Application [restartedMain] Started Application in 0.375 seconds (JVM running for 233.244)
+2022-11-06 07:38:35,482 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 19160 (/home/raj/Documents/edureka_oct_22/boot/09bankapp-security/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/09bankapp-security)
+2022-11-06 07:38:35,482 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-06 07:38:35,772 INFO c.b.Application [restartedMain] Started Application in 0.316 seconds (JVM running for 245.339)
+2022-11-06 07:48:12,140 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 21714 (/home/raj/Documents/edureka_oct_22/boot/09bankapp-security-url/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/09bankapp-security-url)
+2022-11-06 07:48:12,173 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-06 07:48:14,917 INFO c.b.Application [restartedMain] Started Application in 2.998 seconds (JVM running for 3.502)
+2022-11-06 07:49:15,891 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 21926 (/home/raj/Documents/edureka_oct_22/boot/09bankapp-security-url/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/09bankapp-security-url)
+2022-11-06 07:49:15,897 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-06 07:49:18,743 INFO c.b.Application [restartedMain] Started Application in 3.102 seconds (JVM running for 3.601)
+2022-11-06 07:51:13,673 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 21926 (/home/raj/Documents/edureka_oct_22/boot/09bankapp-security-url/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/09bankapp-security-url)
+2022-11-06 07:51:13,673 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-06 07:51:14,146 INFO c.b.Application [restartedMain] Started Application in 0.506 seconds (JVM running for 119.004)
+2022-11-06 07:53:25,113 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 21926 (/home/raj/Documents/edureka_oct_22/boot/09bankapp-security-url/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/09bankapp-security-url)
+2022-11-06 07:53:25,113 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-06 07:53:25,549 INFO c.b.Application [restartedMain] Started Application in 0.467 seconds (JVM running for 250.408)
+2022-11-06 07:53:32,349 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 21926 (/home/raj/Documents/edureka_oct_22/boot/09bankapp-security-url/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/09bankapp-security-url)
+2022-11-06 07:53:32,349 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-06 07:53:32,758 INFO c.b.Application [restartedMain] Started Application in 0.434 seconds (JVM running for 257.616)
+2022-11-06 07:54:10,599 INFO c.b.Application [restartedMain] Starting Application using Java 1.8.0_111 on raj-ThinkPad-E15-Gen-4 with PID 21926 (/home/raj/Documents/edureka_oct_22/boot/09bankapp-security-url/target/classes started by raj in /home/raj/Documents/edureka_oct_22/boot/09bankapp-security-url)
+2022-11-06 07:54:10,599 INFO c.b.Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-11-06 07:54:10,999 INFO c.b.Application [restartedMain] Started Application in 0.424 seconds (JVM running for 295.857)
